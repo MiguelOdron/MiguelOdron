@@ -1,6 +1,6 @@
 Selector {Property:  value;}
 html{ min-height:100%; cursor: url('cursor2.png'), pointer; background-image: url('');
-background-size: 180%; background-position: center;}
+background-size: 180%; background-position: center;background-color: mediumpurple;}
 body {background-color: transparent; text-align: center;}
 
 
@@ -12,16 +12,17 @@ body {background-color: transparent; text-align: center;}
 nav {font-family: "pixel"; font-size: 35px;} 
 nav a {color: #000; text-decoration: none;}
 nav a:hover {
-  cursor: url('cursor2.png'), pointer; text-decoration: underline;
+  cursor: url('cursor2.png'), pointer; text-decoration: ; text-shadow: #db00e3 1px 0 25px;
+  color: white;
 }
 h1 {font-family: "pixel"; font-size: 35px;
 }
 h2 {
   background-image: url('textbox.png');
-  background-size: 375px;
+  background-size: 360px;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 50px;
+  margin-top: 300px;
   padding-top: 0em;
   display: flex;
   justify-content: center;
@@ -32,7 +33,7 @@ h2 {
   color: whitesmoke;
   height: 60px;
   font-family: "pixel";
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 100;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid whitesmoke ; /* The typwriter cursor */
