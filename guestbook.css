@@ -1,0 +1,24 @@
+Selector {Property:  value;}
+html{ min-height:100%; cursor: url('cursor2.png'), pointer; background-image: url('');
+background-size: 180%; background-position: center;background-color: mediumpurple;}
+body {background-color: transparent; text-align: center;}
+
+
+@font-face {
+    font-family: "pixel";
+    src: url('vt323-regular-webfont.woff2') format('woff2'),
+         url('vt323-regular-webfont.woff') format('woff');
+}
+.logo {margin-top: 30px; margin-bottom: 12px;
+}
+
+nav {font-family: "pixel"; font-size: 35px;} 
+nav a {color: #000; text-decoration: none; margin: -5px; padding-top: 0px;}
+nav a:hover {
+  cursor: url('cursor2.png'), pointer; text-decoration: ; text-shadow: #db00e3 1px 0 25px;
+  color: white; background-color: darkcyan;
+}
+h1 {font-family: "pixel"; font-size: 35px;
+}
+h2 {}
+.googsheet

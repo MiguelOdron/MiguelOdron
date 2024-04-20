@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Miguel Odron</title>
+	<link rel="stylesheet" type="text/css" href="guestbook.css">
+</head>
+<body>
+	<audio autoplay>
+			<source src='' type='audio/mpeg'>
+	</audio>
+<nav>
+	<div class="logo"> <img src="websitelogo.png" alt="Miguel Odron"></div> 
+	<div class="div1"><div>
+		<a href="/">&nbsp;about&nbsp;</a>
+		<a href="/">&nbsp;shop&nbsp;</a>
+		<a href="/">&nbsp;music&nbsp;</a>
+		</div></div></nav></p>
+	</div>
+<nav>
+	<div class="nav-items"><div>
+		<a href="/">&nbsp;haemofrost&nbsp;</a>
+		<a href="/">&nbsp;<a href="guestbook.html">guestbook</a>&nbsp;</a></div></div></nav></p>
+	</div>
+<h1>
+	<div class=googsheet><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbKD86uNo32xT9s-GgF9kAbvv6YiHN8SpA6RB_4X4c6Vq1PLY8AbGNvkDRs5G__RsBA0LtLGxJMpV1/pubhtml?gid=0&amp;range=A1:B30&amp;chrome=false&amp;single=true&amp;widget=false&amp;headers=false" width="270" height="300" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+	</div></h1>
+
+<h2><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpJKzpeE6hTknKjI9KO34_yQueaycSHUju1ixwBEvbh3rY7A/viewform?embedded=true" width="297" height="970" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></h2>
+
+<h3><form id="myForm">
+<input id="firstName" name="firstName" type="text" />
+<input type="button" value="Submit" 
+ onClick="google.script.run.withSuccessHandler(DataSaved).processForm(this.form)"
+        />
+</form>
+<div id="Message"></div>
+ <script>
+    function DataSaved(){    
+    document.getElementById('Message').innerHTML = "Data Saved";
+};
+ </script></h3>
+</body>
+</html>
