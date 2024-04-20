@@ -9,11 +9,14 @@ body {background-color: transparent; text-align: center;}
     src: url('vt323-regular-webfont.woff2') format('woff2'),
          url('vt323-regular-webfont.woff') format('woff');
 }
+.logo {margin-top: 30px; margin-bottom: 12px;
+}
+
 nav {font-family: "pixel"; font-size: 35px;} 
-nav a {color: #000; text-decoration: none;}
+nav a {color: #000; text-decoration: none; margin: -5px; padding: 0px;}
 nav a:hover {
   cursor: url('cursor2.png'), pointer; text-decoration: ; text-shadow: #db00e3 1px 0 25px;
-  color: white;
+  color: white; background-color: darkcyan;
 }
 h1 {font-family: "pixel"; font-size: 35px;
 }
@@ -46,6 +49,9 @@ h2 {
   animation: 
     typing 1.5s steps(30, end),
     blink-caret .3s step-end infinite;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+
 }
 
 /* The typing effect */
