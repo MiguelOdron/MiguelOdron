@@ -1,0 +1,61 @@
+Selector {Property:  value;}
+html{ min-height:100%; cursor: url('cursor2.png'), pointer; background-image: url('');
+background-size: 180%; background-position: center;}
+body {background-color: transparent; text-align: center;}
+
+
+@font-face {
+    font-family: "pixel";
+    src: url('vt323-regular-webfont.woff2') format('woff2'),
+         url('vt323-regular-webfont.woff') format('woff');
+}
+nav {font-family: "pixel"; font-size: 35px;} 
+nav a {color: #000; text-decoration: none;}
+nav a:hover {
+  cursor: url('cursor2.png'), pointer; text-decoration: underline;
+}
+h1 {font-family: "pixel"; font-size: 35px;
+}
+h2 {
+  background-image: url('textbox.png');
+  background-size: 375px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  padding-top: 0em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: whitesmoke;
+  height: 60px;
+  font-family: "pixel";
+  font-size: 25px;
+  font-weight: 100;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid whitesmoke ; /* The typwriter cursor */
+  border-width: 3px;
+  border-color: *orange*;
+  border-style: *solid*;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 20auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(30, end),
+    blink-caret .3s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: whitesmoke; }
+
+}
