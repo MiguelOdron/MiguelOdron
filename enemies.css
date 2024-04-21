@@ -1,6 +1,5 @@
 Selector {Property:  value;}
-html{ min-height:100%; cursor: url('cursor2.png'), pointer; background-image: url('');
-background-size: 180%; background-position: center;background-color: mediumpurple;}
+html{ min-height:100%; cursor: url('cursor2.png'), pointer; background-image:  url('textbox.png') repeat; background-position: center;background-color: mediumpurple;}
 body {background-color: transparent; text-align: center;}
 
 
@@ -28,6 +27,15 @@ h2 {
   margin-top: 300px;
   padding-top: 0em;
   display: flex;
+  justify-content: center;
+}
+h3 {
+  background-image: url('cursor2.png');
+  background-size: 360px;
+  background-position: center;
+  background-repeat:repeat;
+  margin-top: 300px;
+  padding-top: 0em;
   justify-content: center;
 }
 
@@ -64,5 +72,7 @@ h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: whitesmoke; }
+
+
 
 }
