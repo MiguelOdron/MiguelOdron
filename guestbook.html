@@ -25,22 +25,40 @@
 		<a href="/">&nbsp;<a href="guestbook.html">guestbook</a>&nbsp;</a></div></div></nav></p>
 	</div>
 <h1>
-	<div class=googsheet><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbKD86uNo32xT9s-GgF9kAbvv6YiHN8SpA6RB_4X4c6Vq1PLY8AbGNvkDRs5G__RsBA0LtLGxJMpV1/pubhtml?gid=0&amp;range=A1:B30&amp;chrome=false&amp;single=true&amp;widget=false&amp;headers=false" width="270" height="300" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+	<div class=googsheet><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbKD86uNo32xT9s-GgF9kAbvv6YiHN8SpA6RB_4X4c6Vq1PLY8AbGNvkDRs5G__RsBA0LtLGxJMpV1/pubhtml?gid=0&amp;range=A1:B10&amp;chrome=false&amp;single=true&amp;widget=false&amp;headers=false" width="270" height="300" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 	</div></h1>
 
-<h2><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpJKzpeE6hTknKjI9KO34_yQueaycSHUju1ixwBEvbh3rY7A/viewform?embedded=true" width="297" height="970" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></h2>
+<h2>
+<form id="Guestbook"
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbzpYEzYKEz0Sow6Qmo74D5p6wPp4ItzCquqSqjXLXa02oBnEHYFxdD-bGEI9JUWre3rqg/exec"
+>
+	<p>what's your name?</p>
+  <p><input name="Name" type="text" id=namebox maxlength="30" style="height:40px; width:200px" required></p>
+  <p>tell me something</p>
+  <p><input name="Message" type="text" id=messagebox maxlength="100" style="height:40px; width:200px" required></p>
+	<p>what's your email?</p>
+  <p><input name="Email" type="email" id= emailbox placeholder="Optional" maxlength="100" style="height:40px; width:200px" ></p>
 
-<h3><form id="myForm">
-<input id="firstName" name="firstName" type="text" />
-<input type="button" value="Submit" 
- onClick="google.script.run.withSuccessHandler(DataSaved).processForm(this.form)"
-        />
+  <p><button type="submit" id="Form-submit" style="height:45px; width:120px" >Submit</button></p>
+
+<script>window.addEventListener("load", function() {
+  const form = document.getElementById('Guestbook');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Thanks! Please be patient as your comment uploads. Check back later ^^");
+    })
+  });
+});</script>
+
 </form>
-<div id="Message"></div>
- <script>
-    function DataSaved(){    
-    document.getElementById('Message').innerHTML = "Data Saved";
-};
- </script></h3>
+</h2>
 </body>
 </html>
