@@ -20,7 +20,7 @@ nav a:hover {
 h1 {font-family: "pixel"; font-size: 35px;
 }
 
-.googsheet {margin: 50px}
+.googsheet {margin: 50px;}
 
 #Form-submit {font-family: pixel; font-size: 120%; background-color: white ;color: #422B69;
 padding-left:  none;padding-right: none;padding-bottom: 50px; margin-top: 17px; border: solid white; transition:  0s 5s;}
