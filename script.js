@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.getElementById('Guestbook');
 
 form.addEventListener('submit', (e)=> {
 	e.preventDefault();
