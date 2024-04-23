@@ -44,9 +44,25 @@
   <div class="g-recaptcha" data-sitekey="6LfyLcQpAAAAAB1O3TLWtlN9vNi908McuFAgMc54"></div>
 
   <p><button type="submit" id="Form-submit" class=submit-button style="height:45px; width:160px" >Submit</button></p>
+
+<script>window.addEventListener("load", function() {
+  const form = document.querySelector('form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Thanks! Please be patient as your comment uploads. Check back later ^^");
+    })
+  });
+});</script>
 </form>
 
-<script src="script.js"></script>
+<script src="script.js"><
 </h2>
 
 <h3></h3>
