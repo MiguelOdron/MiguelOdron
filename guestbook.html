@@ -48,31 +48,27 @@
 
   
 	</form>
-	<script><script>window.addEventListener("load", function() {const form = document.querySelector('form');
+	<script>window.addEventListener("load", function() {
+	const form = document.querySelector('form');
+		form.addEventListener('submit', (e)=> {
+			e.preventDefault();
+				const captchaResponse = grecaptcha.getResponse();
+				if (!captchaResponse.length > 0) {
+				throw new Error("Captcha not complete");
+				}
+				const fd = new FormData(e.target);
+				const params = new URLSearchParams(fd);
+				fetch('https://script.google.com/macros/s/AKfycbzpYEzYKEz0Sow6Qmo74D5p6wPp4ItzCquqSqjXLXa02oBnEHYFxdD-bGEI9JUWre3rqg/exec', {
+				method:	"POST",
+				body: params,
+				})
+				.then(() => {
+      		alert("Thanks! Please be patient as your comment uploads. Check back later ^^");})
+				.then(res => res.json())
+				.then(data => console.log(data))
+				.catch(err => console.error(err))
 
-form.addEventListener('submit', (e)=> {
-	e.preventDefault();
-
-	const captchaResponse = grecaptcha.getResponse();
-
-	if (!captchaResponse.length > 0) {
-		throw new Error("Captcha not complete");
-	}
-
-	const fd = new FormData(e.target);
-	const params = new URLSearchParams(fd);
-
-	fetch('https://script.google.com/macros/s/AKfycbzpYEzYKEz0Sow6Qmo74D5p6wPp4ItzCquqSqjXLXa02oBnEHYFxdD-bGEI9JUWre3rqg/exec', {
-		method:	"POST",
-		body: params,
-	})
-	.then(() => {
-      alert("Thanks! Please be patient as your comment uploads. Check back later ^^");})
-	.then(res => res.json())
-	.then(data => console.log(data))
-	.catch(err => console.error(err))
-
-});</script>
+})});</script>
 
 	</h2>
 
