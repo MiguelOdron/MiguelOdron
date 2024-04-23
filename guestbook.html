@@ -48,7 +48,7 @@
 
   
 	</form>
-	<script>const form = document.querySelector('form');
+	<script><script>window.addEventListener("load", function() {const form = document.querySelector('form');
 
 form.addEventListener('submit', (e)=> {
 	e.preventDefault();
@@ -66,26 +66,12 @@ form.addEventListener('submit', (e)=> {
 		method:	"POST",
 		body: params,
 	})
+	.then(() => {
+      alert("Thanks! Please be patient as your comment uploads. Check back later ^^");})
 	.then(res => res.json())
 	.then(data => console.log(data))
 	.catch(err => console.error(err))
 
-});
-
-window.addEventListener("load", function() {
-  const form = document.querySelector('form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Thanks! Please be patient as your comment uploads. Check back later ^^");
-    })
-  });
 });</script>
 
 	</h2>
